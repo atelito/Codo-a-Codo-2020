@@ -1,0 +1,205 @@
+/* # para elementos con id selector, se usa una sola vez por pagina */
+/* . para elementos de class, se usan varias veces en la pagina */
+/* type selector se pone directamente el elemento web y se usa para todos */
+/* selectores descendentes se 
+/* : para pseudoclases :first-child o :last-child
+/* :: para pseudoelementos ::first
+
+#intro .first em {
+   color: pink; 
+   background-color:gray;
+}*/
+
+ /* @font-face {
+    font-family: GenghisKhan; 
+    src: url('GenghisKhan.otf'); 
+} */ 
+/* para poner un tipo de letra especifico que no tenga el usuario instalado */
+
+*{font-family: 'Roboto', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: #408ED8;
+    color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    /* position: fixed;
+    top: 0px;
+    */
+}
+
+form {
+    background-color: white;
+    text-align: center;
+    margin-top: 0;
+}
+
+.link {
+    color: white;
+    text-decoration:none;
+    font-size:25px;
+}
+
+.link:hover {
+    color:#FFCC29;
+    font-size:30px;
+}
+
+section {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.submit {
+    background-color: #408ED8;
+    padding: 12px 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    margin: 0;
+    font-weight: bold;
+}
+
+.submit:hover {
+    background-color: #0E6AB7;
+}
+
+.reset{
+    background-color: #408ED8;
+    padding: 12px 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    margin: 0;
+    font-weight: bold;
+}
+
+.reset:hover {
+    background-color: #0E6AB7;
+}
+
+/* input.reset::after{
+    content: '' attr(explicacion);
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background: black;
+    color: white;
+    padding: 2px;
+    border: 1px solid #eee;
+    opacity: 0;
+    transition: 0.5s opacity;
+} */
+
+.boton {
+    background-color: #408ED8;
+    padding: 12px 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    margin: 0;
+    font-weight: bold;
+}
+.boton:hover {
+    background-color: #0E6AB7;
+}
+
+textarea {
+    height: 100px;
+}
+
+input, textarea {
+    margin-bottom: 10px;
+    font-size: 11pt;
+    padding: 15px 10px 10px;
+    border: 1px solid #cecece;
+    background-color: #efefef;
+    color: #787575;
+    border-radius: 5px;
+    width: 70%;
+    outline: none;
+    
+}
+
+#contacts img {
+    height: 48px;
+    width: 48px;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+#contacts a {
+    text-decoration: none;
+}
+
+#contacts img:hover {
+    opacity: 0.8;
+}
+
+#contacts {
+    text-align: center;
+}
+
+body{
+    font-size: 13pt;
+    background-color: #efefef;
+    padding: 10px;
+    margin: 0;
+}
+
+h1 span {
+    padding: 10px;
+    font-size: 30pt;
+    text-align: right;
+    margin-top: 45px;
+    font-weight: bolder;
+    text-shadow: 5px 2px 4px whitesmoke;
+}
+
+h2 {
+    font-weight: bolder;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+footer{
+    background-color: #408ED8;
+    color: white;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0%;
+    height: 10%;
+    margin-top: 20%;
+}
+
+.copyright {
+    font-size: 9pt;
+    text-align: center;
+    padding-bottom: 10px;
+    color: white;
+}
+
+/* p::-moz-selection {
+    background: #598624;
+    color: #fff;
+ } para cuando selecciones un txto quede de ese color*/
