@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>PORETTI EFICIENCIA ENERGETICA</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+        <script src="app.js"></script>
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+        <link rel="stylesheet" href="CSS/main.css">
+        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="position">
+            <nav>
+                <a class="link" title=Inicio href="index.html"><img src="img/logo.png" alt="Inicio" height="30"></a>
+                <a class="link" href="index.html">Inicio</a>
+                <a class="link" href="acercade.html">Acerca<span> </span>de</a>
+                <a class="link" href="casosExito.html">Casos<span> </span>de<span> </span>exito</a>
+                <a class="link" href="contacto.html">Contacto</a>
+                <a class="link" href="registro.html">Registro</a> 
+                <script src="js/app.js"></script>
+            </nav>
+        </header>
+        <section>
+            <form action="envioFormulario.html" target="_blank" method="post"> <!--aca va un codigo-->
+                    <h1><span>Hacenos tu consulta</span></h1>
+                    <label for="Nombre">Nombre y Apellido:</label><br>
+                    <input required type="text" id="Nombre" name="Nombre" size="30" tabindex="1"><br><br>
+
+                    <label for="Apellido">Organización:</label><br>
+                    <input required type="text" id="Apellido" name="Apellido" size="30" tabindex="2"><br><br>
+
+                    <label for="Ubicacion">Ubicación:</label><br>
+                    <select required id="Ubicacion" name="Ubicacion" tabindex="3">
+                        <optgroup label="Mendoza">
+                            <option value="Gran Mendoza">Gran Mendoza</option>
+                            <option value="Valle Uco">Valle Uco</option>
+                            <option value="Zona Sur">Zona Sur</option>
+                        </optgroup>
+                        <optgroup label="Otras Provincias">
+                            <option value="San Juan">San Juan</option>
+                            <option value="San Luis">San Luis</option>
+                            <option value="Otro">Otro</option>
+                        </optgroup>
+                    </select><br><br>
+                    
+                    <label for="Correo">Correo electrónico:</label><br>
+                    <input required type="email" id="Correo" placeholder="nombre@empresa.com" size="30" tabindex="4"><br><br>
+
+                    <label for="Telefono">Teléfono:</label><br>
+                    <input required type="number" id="Telefono" placeholder="0 + código de área + número de teléfono" tabindex="5"><br><br>
+                    
+                    <label for="Telefono">Consulta</label><br>
+                    <textarea name="Mensaje" placeholder="Ingrese su consulta" tabindex="6  "></textarea><br><br>
+                    
+                    <input type="reset" value="Reset" class="reset"><br><br> <!-- explicacion="Borra los datos ingresados anteriormente" -->
+
+                    <label for="Archivo">Archivos adicionales:</label><br>
+                    <input type="file" id="Archivo" name="Archivo"><br><br>
+
+                    <input onclick="alert('Valores enviados')" value="Enviar" type="submit" class="submit" size="30"><br> <!--se podria reemplazar?-->
+                
+            </form>
+        </section>
+        <footer class="copyright">
+            <br>
+            <p>&copy; 2020 Todos los derechos reservados</p>
+        </footer>
+    </body>
+</html>
