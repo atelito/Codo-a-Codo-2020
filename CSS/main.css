@@ -19,6 +19,7 @@
 *{font-family: 'Roboto', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+
 html {
     margin: 0;
     padding: 0;
@@ -28,10 +29,10 @@ html {
 header{
     background-color: #408ED8;
     color: white;
-    padding: 15px;
+    padding: 0.5em;
     word-spacing: 2pt;
-    margin-bottom: 10px;
-    border-radius: 10px;
+    margin-bottom: 0.625em;
+    border-radius: 0.625em;
     
 }
 
@@ -39,6 +40,31 @@ a span {
     letter-spacing: -4pt;
 }
 
+.agrandarImg img {
+    height: 1.875em;
+    transition:all .8s ease-in-out;
+    overflow:hidden;
+
+}
+
+.agrandarImg:hover img{
+    transform:scale(1.5);
+    
+}
+
+ul {list-style: none}
+
+li::before {
+    content: "•"; color: #408ED8;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em
+}
+
+/* li.a:hover {
+    color:#FFCC29;
+} */
+  
 form {
     background-color: white;
     text-align: center;
@@ -48,19 +74,19 @@ form {
 .link {
     color: white;
     text-decoration:none;
-    font-size:25px;
+    font-size:1.5625em;
 }
 
 .link:hover {
     color:#FFCC29;
-    font-size:30px;
+    font-size:1.875em;
 }
 
 section {
     background-color: #fff;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 10px;
+    padding: 0.9375em;
+    margin-bottom: 0.0.625em;
+    border-radius: 0.625em;
 }
 
 /* .parallax {
@@ -75,7 +101,7 @@ section {
 
 .submit {
     background-color: #408ED8;
-    padding: 12px 45px;
+    padding: 0.75em 2.8125em;
     border-radius: 5px;
     cursor: pointer;
     color: #ffffff;
@@ -91,7 +117,7 @@ section {
 
 .reset{
     background-color: #408ED8;
-    padding: 12px 45px;
+    padding: 0.75em 2.8125em;
     border-radius: 5px;
     cursor: pointer;
     color: #ffffff;
@@ -120,7 +146,7 @@ section {
 
 .boton {
     background-color: #408ED8;
-    padding: 12px 45px;
+    padding: 0.75em 2.8125em;
     border-radius: 5px;
     cursor: pointer;
     color: #ffffff;
@@ -134,14 +160,14 @@ section {
 }
 
 textarea {
-    height: 100px;
+    height: 6.25em;
 }
 
 input, textarea {
-    margin-bottom: 10px;
+    margin-bottom: 0.625em;
     font-size: 11pt;
-    padding: 15px 10px 10px;
-    border: 1px solid #cecece;
+    padding: 0.9375em 0.625em 0.625em;
+    border: 0.0625em solid #cecece;
     background-color: #efefef;
     color: #787575;
     border-radius: 5px;
@@ -176,7 +202,7 @@ input, textarea {
     width: 211px;
     height: 211px;
     border: 1px solid #f1f1f1;
-    perspective: 1000px;
+    perspective: 62.5em;
     
     display: inline-block
     
@@ -230,16 +256,16 @@ table{
 body{
     font-size: 13pt;
     background-color: #efefef;
-    padding: 10px;
+    padding: 0.625em;
     margin: 0;
     height: 100%;
 }
 
 h1 span {
-    padding: 10px;
+    padding: 0.625em;
     font-size: 30pt;
     text-align: right;
-    margin-top: 45px;
+    margin-top: 2.8125em;
     font-weight: bolder;
     text-shadow: 5px 2px 4px whitesmoke;
 }
@@ -252,6 +278,25 @@ p {
     padding: 0;
     margin: 0;
 }
+
+.contenedor{
+    width: 31.25em;
+    height: 15.625em;
+}
+
+.contenedor img {
+    
+    position: absolute;
+    width: 25em;
+    max-height: 15.625em;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.contenedor img.cambioImg:hover {
+    opacity: 0;
+    
+}
+
 
 footer{
     background-color: #408ED8;
@@ -266,7 +311,7 @@ footer{
 .copyright {
     font-size: 9pt;
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 0.625em;
     color: white;
 }
 
