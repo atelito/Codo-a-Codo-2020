@@ -1,0 +1,413 @@
+/* # para elementos con id selector, se usa una sola vez por pagina */
+/* . para elementos de class, se usan varias veces en la pagina */
+/* type selector se pone directamente el elemento web y se usa para todos */
+/* selectores descendentes se 
+/* : para pseudoclases :first-child o :last-child
+/* :: para pseudoelementos ::first
+
+#intro .first em {
+   color: pink; 
+   background-color:gray;
+}*/
+
+ /* @font-face {
+    font-family: GenghisKhan; 
+    src: url('GenghisKhan.otf'); 
+} */ 
+/* para poner un tipo de letra especifico que no tenga el usuario instalado */
+
+*{
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.grid-container {
+    display: inline-grid;
+    grid-gap: 0.3em;
+    grid-template-areas: 
+      'izquierda'
+      'section' 
+      'mitad1' 
+      'derecha1'
+      'mitad2'
+      'derecha2'
+      'contacts' 
+      'footer';
+ } 
+
+ @media (min-width: 700px) {
+    .grid-container  {
+      grid-template-areas: 
+      'izquierda mitad1 mitad1 mitad1'
+      'izquierda derecha1 derecha1 derecha1'
+      'izquierda mitad2 mitad2 mitad2'
+      'izquierda derecha2 derecha2 derecha2'
+      'izquierda contacts contacts contacts'
+      'footer footer footer footer';
+    }
+}
+
+@media (min-width: 1000px) {
+    .grid-container  {
+      grid-template-areas: 
+      'izquierda izquierda izquierda izquierda izquierda'
+      'section section section section section'
+      'mitad1 mitad1 derecha1 derecha1 derecha1'
+      'derecha2 derecha2 derecha2 mitad2 mitad2'
+      'contacts contacts contacts contacts contacts' 
+      'footer footer footer footer footer';
+    }
+}
+
+.header{
+    align-items: center;
+    color: white;
+    text-decoration:none;
+    font-size:2.1em;
+    background-color: #408ED8;
+    color: #FFCC29;
+    padding: 0.5em; 
+    word-spacing: 2pt;
+    margin-bottom: 0.625em;
+    border-radius: 0.25em;
+    font-weight: bolder;
+}
+
+.frase {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration:none;
+    font-size:1.5em;
+    background-color: #408ED8;
+    color: white;
+    padding: 0.5em; 
+    word-spacing: 2pt;
+    margin-bottom: 0.25em;
+    border-radius: 0.25em;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.izquierda {
+    grid-area: izquierda;
+    background-color: #408ED8;
+    color: white;
+    padding: 0.5em;
+    word-spacing: 2pt;
+    margin-bottom: 0.625em;
+    border-radius: 0.625em;
+}
+
+.mitad1 {
+    grid-area: mitad1;
+    background-color: #fff;
+    padding: 0.9375em;
+    margin-bottom: 0.625em;
+    border-radius: 0.625em;
+}
+
+.derecha1 {
+    grid-area: derecha1;
+}
+
+  .mitad2 {
+    grid-area: mitad2;
+    background-color: #fff;
+    padding: 0.9375em;
+    margin-bottom: 0.625em;
+    border-radius: 0.625em;
+}
+
+.derecha2 {
+    grid-area: derecha2;
+}
+
+.contacts {
+    grid-area: contacts;
+}
+
+a span {
+    letter-spacing: -4pt;
+}
+
+.agrandarImg img {
+    height: 1.875em;
+    transition:all .8s ease-in-out;
+    overflow:hidden;
+}
+
+.agrandarImg:hover img{
+    transform:scale(1.5);   
+}
+
+ul {list-style: none}
+
+li::before {
+    content: "•"; color: #408ED8;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em
+}
+
+/* li.a:hover {
+    color:#FFCC29;
+} */
+  
+form {
+    background-color: white;
+    text-align: center;
+    margin-top: 0;
+}
+
+.link {
+    color: white;
+    text-decoration:none;
+    font-size:1.5625em;
+}
+
+.link:hover {
+    color:#FFCC29;
+    font-size:1.875em;
+}
+
+.section {
+    background-color: white;
+    padding: 0.9375em;
+    margin-bottom: 0.625em;
+    border-radius: 0.625em;
+}
+
+
+h1 span {
+    padding: 0.625em;
+    font-size: 30pt;
+    text-align: right;
+    margin-top: 2.8125em;
+    font-weight: bolder;
+    text-shadow: 5px 2px 4px whitesmoke;
+}
+
+h2 {
+    font-weight: bolder;
+}
+/* .parallax {
+    background-image: url("img/paneles.jpg");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.submit {
+    background-color: #408ED8;
+    padding: 0.75em 2.8125em;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    margin: 0;
+    font-weight: bold;
+}
+
+.submit:hover {
+    background-color: #0E6AB7;
+}
+
+.reset{
+    background-color: #408ED8;
+    padding: 0.75em 2.8125em;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    margin: 0;
+    font-weight: bold;
+}
+
+.reset:hover {
+    background-color: #0E6AB7;
+}
+
+/* input.reset::after{
+    content: '' attr(explicacion);
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background: black;
+    color: white;
+    padding: 2px;
+    border: 1px solid #eee;
+    opacity: 0;
+    transition: 0.5s opacity;
+} */
+
+.boton {
+    background-color: #408ED8;
+    padding: 0.75em 2.8125em;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    margin: 0;
+    font-weight: bold;
+}
+.boton:hover {
+    background-color: #0E6AB7;
+}
+
+textarea {
+    height: 6.25em;
+}
+
+input, textarea {
+    margin-bottom: 0.625em;
+    font-size: 11pt;
+    padding: 0.9375em 0.625em 0.625em;
+    border: 0.0625em solid #cecece;
+    background-color: #efefef;
+    color: #787575;
+    border-radius: 5px;
+    width: 70%;
+    outline: none; 
+}
+
+#contacts img {
+    height: 48px;
+    width: 48px;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+#contacts a {
+    text-decoration: none;
+}
+
+#contacts img:hover {
+    opacity: 0.8;
+}
+
+.cards{
+    width: 430px;
+    height: auto;
+    margin:auto;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 211px;
+    height: 211px;
+    border: 1px solid white;
+    perspective: 62.5em;
+    
+    display: inline-block 
+  }
+  
+  /* Necesario para posicionar la parte delantera y trasera */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+  
+  /* Hace un giro horizontal cuando mueve el ratón sobre el contenedor */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+  
+  /* Coloca la parte delantera y trasera */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+  
+  /* Estilizar la parte delantera (retrocede si falta la imagen) */
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+  
+  /* Parte trasera */
+.flip-card-back {
+    background-color: #0E6AB7;
+    color: white;
+    transform: rotateY(180deg);
+}  
+
+#contacts {
+    text-align: center;
+}
+
+table{
+    margin: 0 auto;
+    text-align:center;
+}
+
+body{
+    font-size: 13pt;
+    background-color: #efefef;
+    padding: 0.625em;
+    margin: 0;
+    height: 100%;
+}
+
+
+
+.contenedor{
+    width: 31.25em;
+    height: 15.625em;
+}
+
+.contenedor img {
+    position: absolute;
+    width: 25em;
+    max-height: 15.625em;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.contenedor img.cambioImg:hover {
+    opacity: 0;
+    
+}
+
+.footer{
+    grid-area: footer;
+    background-color: #408ED8;
+    color: white;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0%;
+}
+
+.copyright {
+    font-size: 9pt;
+    text-align: center;
+    padding-bottom: 0.625em;
+    color: white;
+}
+
+
+/* p::-moz-selection {
+    background: #598624;
+    color: #fff;
+ } para cuando selecciones un txto quede de ese color*/
