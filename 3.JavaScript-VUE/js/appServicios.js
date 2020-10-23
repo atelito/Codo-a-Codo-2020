@@ -76,20 +76,20 @@ var empresasImg = [
 ]
 
 var flexboxImagenes = [
-    {src: "/img/termografia/2.jpg"},
-    {src: "/img/termografia/3.jpg"},
-    {src: "/img/termografia/4.jpg"},
-    {src: "/img/termografia/5.jpg"},
-    {src: "/img/termografia/6.png"},
-    {src: "/img/termografia/7.jpg"},
-    {src: "/img/termografia/8.png"},
-    {src: "/img/termografia/9.jpg"},
-    {src: "/img/termografia/10.jpg"},
-    {src: "/img/termografia/11.jpg"},
-    {src: "/img/termografia/12.png"},
-    {src: "/img/termografia/13.jpg"},
-    {src: "/img/termografia/14.jpg"},
-    {src: "/img/termografia/15.jpg"}
+    {src: "termografia/2.jpg"},
+    {src: "termografia/3.jpg"},
+    {src: "termografia/4.jpg"},
+    {src: "termografia/5.jpg"},
+    {src: "termografia/6.png"},
+    {src: "termografia/7.jpg"},
+    {src: "termografia/8.png"},
+    {src: "termografia/9.jpg"},
+    {src: "termografia/10.jpg"},
+    {src: "termografia/11.jpg"},
+    {src: "termografia/12.png"},
+    {src: "termografia/13.jpg"},
+    {src: "termografia/14.jpg"},
+    {src: "termografia/15.jpg"}
 ]
 //////////////////// SERVICIOS ////////////////////
 
