@@ -33,12 +33,12 @@ html {
     grid-gap: 0.3em;
     grid-template-areas: 
       'izquierda'
-      'section' 
+      'flexbox'
       'mitad1' 
       'derecha1'
       'mitad2'
       'derecha2'
-      'contacts' 
+      'contacts'
       'footer';
  } 
 
@@ -46,6 +46,7 @@ html {
     .grid-container  {
       grid-template-areas: 
       'izquierda mitad1 mitad1 mitad1'
+      'izquierda flexbox flexbox flexbox'
       'izquierda derecha1 derecha1 derecha1'
       'izquierda mitad2 mitad2 mitad2'
       'izquierda derecha2 derecha2 derecha2'
@@ -58,9 +59,10 @@ html {
     .grid-container  {
       grid-template-areas: 
       'izquierda izquierda izquierda izquierda izquierda'
-      'section section section section section'
+      'flexbox flexbox flexbox flexbox flexbox'
       'mitad1 mitad1 derecha1 derecha1 derecha1'
       'derecha2 derecha2 derecha2 mitad2 mitad2'
+      'table table table table table'
       'contacts contacts contacts contacts contacts' 
       'footer footer footer footer footer';
     }
@@ -406,8 +408,33 @@ body{
     color: white;
 }
 
+/* ////////////////////////////////////////////////////////////////////////// */
 
-/* p::-moz-selection {
-    background: #598624;
-    color: #fff;
- } para cuando selecciones un txto quede de ese color*/
+            
+.termografias {
+    grid-area: flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 1em 1em;
+    align-items: center;
+    align-content: space-between;
+    width: 100%;
+}
+  
+.column {
+    max-width: 5em;
+    padding: 1em 1em;
+}
+  
+.flexbox_img{
+    padding: 1em 1em;
+    vertical-align: middle;
+    width: 15em;
+}
+
+@media (min-width: 700px) {
+    .termografias {
+        flex-direction: row;
+    }
+}

@@ -75,13 +75,28 @@ var empresasImg = [
     width: "200"}
 ]
 
+var flexboxImagenes = [
+    {src: "/img/termografia/2.jpg"},
+    {src: "/img/termografia/3.jpg"},
+    {src: "/img/termografia/4.jpg"},
+    {src: "/img/termografia/5.jpg"},
+    {src: "/img/termografia/6.png"},
+    {src: "/img/termografia/7.jpg"},
+    {src: "/img/termografia/8.png"},
+    {src: "/img/termografia/9.jpg"},
+    {src: "/img/termografia/10.jpg"},
+    {src: "/img/termografia/11.jpg"},
+    {src: "/img/termografia/12.png"},
+    {src: "/img/termografia/13.jpg"},
+    {src: "/img/termografia/14.jpg"},
+    {src: "/img/termografia/15.jpg"}
+]
+//////////////////// SERVICIOS ////////////////////
+
+//////////////////// SERVICIOS ////////////////////
 
 
-//////////////////// INICIO ////////////////////
-
-//////////////////// INICIO ////////////////////
-
-var body = document.getElementById("body_inicio");
+var body = document.getElementById("body_servicios");
 
 var grilla = document.createElement("div");
 grilla.className = "grid-container";
@@ -102,55 +117,21 @@ for (let i = 0; i < headerData.length; i++){
     header.appendChild(headerLink[i]);
 }
 
-
 menu.appendChild(header);
 
-var foto1 = document.createElement("div");
-foto1.className = "mitad1";
-foto1.innerHTML = `<div class="contenedor">
-<img clas="dimensiones" src="img/paneles.jpg" alt="Energia">
-<img class="dimensiones cambioImg" src="img/molinos2.jpg" alt="Molinos">
-</div>`;
-grilla.appendChild(foto1);
+var termografias = document.createElement("div");
+termografias.className = "flexbox termografias section";
+termografias.id = "termografias";
 
-var parrafo1 = document.createElement("div");
-parrafo1.className = "derecha1 section";
-parrafo1.innerHTML = `<h2>Ahorro de costo de energia</h2>
-<ul>
-    <li class="a">Control y análisis de Facturas de energía eléctrica y Gas Natural. Análisis de Optimización de Costos de Energía. Representación y Gestión de reclamos</li>
-    <li class="a">Planificación y adecuación del Régimen Tarifario según necesidad del cliente</li>
-    <li class="a">Contrataciones de potencia electrica segun matriz de produccion del usuario</li>
-    <li class="a">Proyecciones financieras y costos semestrales esperados por ajustes tarifarios y/o cambios programados en la matriz de producción</li>
-    <li class="a">Análisis de contratos Energéticos. Asesoramiento en ley 27.191 / 27.424</li>
-</ul>`;
-grilla.appendChild(parrafo1);
+var flexbox = [flexboxImagenes.length];
+for (let i = 0; i < flexboxImagenes.length; i++){
+    flexbox[i] = document.createElement("img");
+    flexbox[i].className = "flexbox_img";
+    flexbox[i].src = flexboxImagenes[i].src;
+    termografias.appendChild(flexbox[i]);
+}
 
-var foto2 = document.createElement("div");
-foto2.className = "mitad2";
-foto2.innerHTML = `<div class="contenedor">
-<img clas="dimensiones" src="img/medidores.jpeg" alt="Energia">
-<img class="dimensiones cambioImg" src="img/molinos.jpg" alt="Molinos">
-</div>`;
-grilla.appendChild(foto2);
-
-var parrafo2 = document.createElement("div");
-parrafo2.className = "derecha2 section";
-parrafo2.innerHTML = `<h2>Eficiencia energética y Energías Renovables</h2>
-<ul>
-    <li class="a">Optimización de procesos productivos</li>
-    <li class="a">Asesoramiento en plan de inversiones en eficiencia energética</li>
-    <li class="a">Detección y reducción en pérdidas ocultas</li>
-    <li class="a">Mediciones de temperatura en Tableros eléctricos</li>
-    <li class="a">Mediciones termográficas en envolvente de edificios</li>
-    <li class="a">Mejorar la Climatización</li>
-    <li class="a">Iuminación. Medición de niveles de iluminancia en espacios de trabajo. Relación con requisitos de Higiene y Seguridad</li>
-    <li class="a">Modelización térmica y lumínica por software</li>
-    <li class="a">Relevamiento de cargas y detección de picos de potencia</li>
-    <li class="a">Mediciones de puesta a tierra y continuidad de las masas segun resolución SRT900</li>
-    <li class="a">Proyectos de inversión para autogeneración: energía solar térmica y fotovoltaica</li>
-    <li class="a">Capacitaciones a personal clave</li>
-</ul>`;
-grilla.appendChild(parrafo2);
+grilla.appendChild(termografias);
 
 var contacts = document.createElement("div");
 contacts.className = "contacts section";
