@@ -6,8 +6,7 @@ for (var i = 0; i < args.length; ++i) {
     var value = parts[1];
     if (value == null) {
       value = "null"
-    }
-    else {
+    } else {
       value = '"' + unescape(value.replace(/\+/g, ' ')) + '"';
     }
 
