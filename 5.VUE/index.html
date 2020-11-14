@@ -2,17 +2,37 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La zapateria de Don Julio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="arriba.js"></script>
+    <link rel="stylesheet" href="icomoon/fonts/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <title>CONTROLADOR DEL MOUSE</title>
 </head>
 
 <body>
-    <article id="app">
-        {{ message }}
-    </article>
+    <div id="SPA">
+        <main class="grid-container">
+            <nav class="largoTotal">
+                <a class="link" @click="view = 'home'">Integrantes</a>
+                <a class="link" @click="view = 'introduccion'">Introducción</a>
+                <a class="link" @click="view = 'desarrollo'">Desarrollo</a>
+                <a class="link" @click="view = 'conclusiones'">Conclusiones</a>
+                <a class="link" @click="view = 'bibliografia'">Bibliografía</a>
+            </nav>
+            <component :is="view"></component>
+            <section class="profe">
+                <h1><span class="icon-mouse"></span>&nbspPROFESOR</h1>
+                <p>N N --- e-mail: NN@gmail.com</p>
+            </section>
+        </main>
+    </div>
+    <script src="js/vue.js"></script>
+    <link rel="stylesheet" href="mainVue.css" />
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="/5.VUE/js/app.js"></script>
 </body>
 
 </html>

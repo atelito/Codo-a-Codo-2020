@@ -1,46 +1,28 @@
 const templates = {
-    home: `
-    <div>
+    home: `<div>
     <section class="izquierda">
     <h1><span class="icon-person"></span>&nbspAlumnos</h1>
     <table>
-        <th>Nombre y Apellido</th>
-        <th>Correo Electronico</th>
-        <th>Celular</th>
-        <tr>
-            <td>
-                <a class="link" rel="nofollow noopener noreferrer" href="" target="_blank">Pablo Valentini</a>
-            </td>
-            <td>pablogastonvalentini@gmail.com</td>
-            <td>2615586148</td>
-        </tr>
-        <!-- <tr>
-            <td>
-                <a class="link" rel="nofollow noopener noreferrer" href="" target="_blank">Bruno Olivera</a>
-            </td>
-            <td>brunoolivera99.bo@gmail.com</td>
-            <td>2625591583</td>
-        </tr>
-        <tr>
-            <td>
-                <a class="link" rel="nofollow noopener noreferrer" href="" target="_blank">Ignacio Larrañaga</a>
-            </td>
-            <td>nachorojon7@gmail.com</td>
-            <td>2615340736</td>
-        </tr> -->
-        <tr>
-            <td>
-                <a class="link" rel="nofollow noopener noreferrer"
-                    href="https://www.linkedin.com/in/a-axel-poretti-618ba520/" target="_blank">Axel Poretti</a>
-            </td>
-            <td>aaxelporetti@gmail.com</td>
-            <td>2615631178</td>
-        </tr>
-    </table>
+            <th>Nombre y Apellido</th>
+            <th>Correo Electronico</th>
+            <th>Legajo</th>
+            <tr>
+                <td><a class="link" rel="nofollow noopener noreferrer"
+                href="https://www.linkedin.com/in/a-axel-poretti-618ba520/" target="_blank">Axel Poretti</a></td>
+                <td>aaxelporetti@gmail.com</p></td>
+                <td>9150</p>
+            </tr>
+            <tr>
+                <td><a class="link" rel="nofollow noopener noreferrer" href="" target="_blank">Natalia Natalia</a></td>
+                <td>nn@gmail.com</p></td>
+                <td>1050</p>
+            </tr>
+        </table>
 </section>
-<section class="derecha">
-    <img src="img/mouse.webp" alt="mouse" height="280em" />
-</section>`,
+    <section class="derecha">
+        <img src="img/mouse.webp" alt="mouse" height="280em" />
+    </section>
+    </div>`,
     introduccion: `
     <div>
     <section class="izquierda">
@@ -559,7 +541,20 @@ const templates = {
 var app = new Vue({
     el: "#SPA",
     data: {
-        view: 'home'
+        view: 'home',
+        alumnos: [{
+                nombre: "Axel Poretti",
+                correo: "aaxelporetti@gmail.com",
+                legajo: "9150",
+                imagen: "img/avatar.png"
+            },
+            {
+                nombre: "Juan Perez",
+                correo: "jperez@gmail.com",
+                legajo: "10105",
+                imagen: "img/avatar2.png"
+            }
+        ]
     },
     components: {
         home: {
@@ -580,27 +575,9 @@ var app = new Vue({
     }
 })
 
-var alumnos = new VUE({
-    el: "#alumnos",
-    data: {
-        alumnos: [{
-                nombre: "Axel Poretti",
-                correo: "aaxelporetti@gmail.com",
-                legajo: "9150",
-                imagen: "img/avatar.png"
-            },
-            {
-                nombre: "Juan Perez",
-                correo: "jperez@gmail.com",
-                legajo: "10105",
-                imagen: "img/avatar2.png"
-            }
-        ]
-    }
-})
+var alumnos = new Vue({
+    el: '#alumnos',
 
-var app = new Vue({
-    el: "#app",
     data: {
         alumnos: [{
                 nombre: "Axel Poretti",

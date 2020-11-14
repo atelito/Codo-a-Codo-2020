@@ -1,7 +1,8 @@
 
-var alumnos = new VUE({
-    el: "#alumnos",
+var app = new VUE({
+    el: "#app",
     data: {
+        message: 'Hola que tal',
         alumnos: [{
                 nombre: "Axel Poretti",
                 correo: "aaxelporetti@gmail.com",
